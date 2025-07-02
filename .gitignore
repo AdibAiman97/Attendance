@@ -1,0 +1,15 @@
+# Composer dependencies
+/vendor/
+
+# macOS files
+.DS_Store
+
+# Log files and temporary directories
+/phpqrcode/cache/
+/phpqrcode/temp/
+/HEA/qr_codes/temp/
+
+# Sensitive configuration files
+# IMPORTANT: Your database credentials should not be public.
+# Create a copy of this file named "dbcon.php" and fill in your actual credentials.
+/Includes/dbcon.php
