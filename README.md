@@ -6,7 +6,6 @@
 
   Key Features
 
-
    * QR Code-Based Attendance: Generate unique QR codes for classes or events. Students can
      scan the code to mark their attendance instantly.
    * Multiple User Roles: The system is built with a clear separation of roles and
@@ -55,10 +54,7 @@
   Installation
 
    1. Clone the repository:
-
-
-   1     git clone <your-repo-url>
-
+       * git clone <your-repo-url>
    2. Database Setup:
        * Create a new MySQL/MariaDB database.
        * Import the DATABASE FILE/attendancesystem.sql file into your new database.
