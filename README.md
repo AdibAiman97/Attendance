@@ -1,10 +1,10 @@
-*STDC Attendance System*
+# STDC Attendance System
 
   A comprehensive, web-based attendance management system designed for educational
   institutions. It leverages QR codes for a modern, efficient, and paperless approach to
   tracking student attendance.
 
-  1) Key Features
+ # 1) Key Features
 
    * QR Code-Based Attendance: Generate unique QR codes for classes or events. Students can
      scan the code to mark their attendance instantly.
@@ -25,7 +25,7 @@
    * Data Export: Download attendance records in spreadsheet format for archival or analysis
      (utilizing the PhpSpreadsheet library).
 
-  2) Technology Stack
+  # 2) Technology Stack
 
    * Backend: PHP
    * Frontend: HTML, CSS, JavaScript, jQuery, Bootstrap
@@ -35,7 +35,7 @@
        * phpqrcode: For generating the QR codes.
        * phpoffice/phpspreadsheet: For exporting data to Excel format.
 
-  3) Project Structure
+  # 3) Project Structure
 
   The application is organized into modules based on user roles:
 
@@ -49,7 +49,7 @@
    * /DATABASE FILE: Contains the SQL file (attendancesystem.sql) to set up the database
      schema and initial data.
      
-  4)  Project Preview
+  # 4)  Project Preview
 
  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/546667e9-9d96-4f87-bcaa-fd8f310ea06f" />
  <br>
