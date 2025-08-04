@@ -42,8 +42,8 @@
 
 
    * /Admin: Admin dashboard and management functionalities.
-   * /HEA: Portal for the Head of Education Affair.
-   * /HEP: Portal for the Head of Education Programme.
+   * /HEA: Portal for the Hal Ehwal Akademik.
+   * /HEP: Portal for the Hal Ehwal Pelajar.
    * /Student: Portal for students to view their attendance.
    * /Includes: Contains shared files like database connection (dbcon.php) and session
      management.
