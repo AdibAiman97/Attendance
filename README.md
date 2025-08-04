@@ -57,7 +57,8 @@
  <br>
  <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/9aa3eb46-96a7-4320-8a56-cf6bbe6a3afe" />
  <br>
- <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/68f2e150-9cfb-479a-8fea-10fad9d17523" />
+ <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/21265661-ddce-4832-bddb-30b422cc808d" />
+
 
 
 
