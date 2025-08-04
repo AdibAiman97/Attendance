@@ -51,7 +51,7 @@
      
   4)  Project Preview
 
- <img width="1915" height="1047" alt="image" src="https://github.com/user-attachments/assets/546667e9-9d96-4f87-bcaa-fd8f310ea06f" />
+ <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/546667e9-9d96-4f87-bcaa-fd8f310ea06f" />
 
 
 
