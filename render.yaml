@@ -6,28 +6,5 @@ services:
     dockerContext: .
     plan: free
     healthCheckPath: /index.php
-    # Environment variables will be set manually in Render Dashboard
-    # DB_HOST: mysql-db (the service name)
-    # DB_USER: user
-    # DB_PASSWORD: password
-    # DB_NAME: attendancesystem
-    # DB_PORT: 3306
-  - type: pserv
-    name: mysql-db
-    env: docker
-    dockerfilePath: ./Dockerfile.mysql
-    dockerContext: .
-    plan: free
-    envVars:
-      - key: MYSQL_DATABASE
-        value: attendancesystem
-      - key: MYSQL_USER
-        value: user
-      - key: MYSQL_PASSWORD
-        value: password
-      - key: MYSQL_ROOT_PASSWORD
-        value: password
-    disk:
-      name: mysql-data
-      mountPath: /var/lib/mysql
-      sizeGB: 10
+    # Environment variables (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT)
+    # should be set manually in Render Dashboard after creating MySQL service
