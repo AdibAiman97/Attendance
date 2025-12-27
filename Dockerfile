@@ -26,6 +26,9 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 # Enable apache rewrite module
 RUN a2enmod rewrite
 
+# Configure PHP to expose environment variables
+RUN echo "variables_order = \"EGPCS\"" >> /usr/local/etc/php/conf.d/docker-php-env.ini
+
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
