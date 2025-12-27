@@ -7,13 +7,27 @@ services:
     plan: free
     healthCheckPath: /index.php
     # Environment variables will be set manually in Render Dashboard
-    # since fromService doesn't work with Docker deployments
+    # DB_HOST: mysql-db (the service name)
+    # DB_USER: user
+    # DB_PASSWORD: password
+    # DB_NAME: attendancesystem
+    # DB_PORT: 3306
   - type: pserv
     name: mysql-db
-    env: mysql
+    env: docker
+    dockerfilePath: ./Dockerfile.mysql
+    dockerContext: .
     plan: free
-    mysql:
-      database: attendancesystem
-      user: user
-      password: password
-      initializationScriptPath: DATABASE FILE/attendancesystem.sql
+    envVars:
+      - key: MYSQL_DATABASE
+        value: attendancesystem
+      - key: MYSQL_USER
+        value: user
+      - key: MYSQL_PASSWORD
+        value: password
+      - key: MYSQL_ROOT_PASSWORD
+        value: password
+    disk:
+      name: mysql-data
+      mountPath: /var/lib/mysql
+      sizeGB: 10
