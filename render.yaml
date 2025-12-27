@@ -35,7 +35,6 @@ services:
 
 databases:
   - name: mysql-db
-    mysqlMajorVersion: 8
     databaseName: attendancesystem
     user: user
     plan: free
