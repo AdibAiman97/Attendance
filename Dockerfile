@@ -23,11 +23,15 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install soap \
     && docker-php-ext-install mysqli
 
-# Enable apache rewrite module
-RUN a2enmod rewrite
+# Enable apache modules
+RUN a2enmod rewrite && a2enmod env
 
 # Configure PHP to expose environment variables
 RUN echo "variables_order = \"EGPCS\"" >> /usr/local/etc/php/conf.d/docker-php-env.ini
+
+# Create Apache config to pass environment variables to PHP
+RUN echo "PassEnv DB_HOST DB_USER DB_PASSWORD DB_NAME DB_PORT" > /etc/apache2/conf-available/render-env.conf && \
+    a2enconf render-env
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
