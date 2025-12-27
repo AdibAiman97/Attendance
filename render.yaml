@@ -9,35 +9,32 @@ services:
     envVars:
       - key: DB_HOST
         fromService:
-          type: pserv
+          type: db
           name: mysql-db
           property: host
       - key: DB_PORT
         fromService:
-          type: pserv
+          type: db
           name: mysql-db
           property: port
       - key: DB_USER
         fromService:
-          type: pserv
+          type: db
           name: mysql-db
           property: user
       - key: DB_PASSWORD
         fromService:
-          type: pserv
+          type: db
           name: mysql-db
           property: password
       - key: DB_NAME
         fromService:
-          type: pserv
+          type: db
           name: mysql-db
           property: database
-  - type: pserv
-    name: mysql-db
-    env: mysql
+databases:
+  - name: mysql-db
+    engine: mysql
+    databaseName: attendancesystem
+    user: user
     plan: free
-    mysql:
-      database: attendancesystem
-      user: user
-      password: password # Please change this to a strong password
-      initializationScriptPath: DATABASE FILE/attendancesystem.sql
