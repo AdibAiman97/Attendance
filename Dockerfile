@@ -4,6 +4,19 @@ FROM php:8.0-apache
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libonig-dev \
+    libxml2-dev \
+    libxslt-dev \
+    libsoap-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-install mbstring \
+    && docker-php-ext-install xml \
+    && docker-php-ext-install xsl \
+    && docker-php-ext-install soap \
     && docker-php-ext-install zip
 
 # Install mysqli extension
