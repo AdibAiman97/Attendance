@@ -10,13 +10,12 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     libxslt-dev \
-    libsoap-dev \
+    php8.0-soap \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-install mbstring \
     && docker-php-ext-install xml \
     && docker-php-ext-install xsl \
-    && docker-php-ext-install soap \
     && docker-php-ext-install zip
 
 # Install mysqli extension
