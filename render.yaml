@@ -9,32 +9,33 @@ services:
     envVars:
       - key: DB_HOST
         fromService:
-          type: db
+          type: database # Changed from 'db' to 'database'
           name: mysql-db
           property: host
       - key: DB_PORT
         fromService:
-          type: db
+          type: database
           name: mysql-db
           property: port
       - key: DB_USER
         fromService:
-          type: db
+          type: database
           name: mysql-db
           property: user
       - key: DB_PASSWORD
         fromService:
-          type: db
+          type: database
           name: mysql-db
           property: password
       - key: DB_NAME
         fromService:
-          type: db
+          type: database
           name: mysql-db
           property: database
+
 databases:
   - name: mysql-db
-    engine: mysql
+    type: postgres # Change 'engine: mysql' to 'type: postgres'
     databaseName: attendancesystem
     user: user
     plan: free
