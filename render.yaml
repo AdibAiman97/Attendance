@@ -1,7 +1,9 @@
 services:
   - type: web
     name: stdc-attendance-system
-    env: apache-php
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     plan: free
     healthCheckPath: /index.php
     envVars:
@@ -30,13 +32,6 @@ services:
           type: pserv
           name: mysql-db
           property: database
-    buildCommand: |
-      ls -la
-      composer install
-      ls -la
-    startCommand: |
-      # Start Apache in the foreground
-      /usr/sbin/apache2ctl -D FOREGROUND
   - type: pserv
     name: mysql-db
     env: mysql
