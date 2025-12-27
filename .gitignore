@@ -10,6 +10,4 @@
 /HEA/qr_codes/temp/
 
 # Sensitive configuration files
-# IMPORTANT: Your database credentials should not be public.
-# Create a copy of this file named "dbcon.php" and fill in your actual credentials.
-/Includes/dbcon.php
+# Note: dbcon.php uses environment variables, so it's safe to commit
